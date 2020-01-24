@@ -1,0 +1,59 @@
+name: aws-api-gateway
+version: "0.1.0.0"
+author: Bellroy
+maintainer: geeks@bellroy.com
+copyright: Bellroy
+github: tricycle/aws-api-gateway
+license-file: LICENSE
+extra-source-files:
+  - README.md
+library:
+  source-dirs: src
+  exposed-modules:
+    - Aws.Api.Gateway
+  other-modules:
+    - Prelude
+  dependencies:
+    - aeson
+    - aeson-casing
+    - base-noprelude
+    - bytestring
+    - case-insensitive
+    - http-types
+    - iproute
+    - lens
+    - relude
+    - text
+    - unordered-containers
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -Wpartial-fields
+  - -Wtabs
+  - -Wmissing-local-signatures
+  - -fhelpful-errors
+  - -fprint-expanded-synonyms
+  - -fwarn-unused-do-bind
+  - -Werror=incomplete-patterns
+
+default-extensions:
+  - DefaultSignatures
+  - DeriveAnyClass
+  - DeriveFunctor
+  - DeriveGeneric
+  - DerivingStrategies
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - MultiParamTypeClasses
+  - OverloadedStrings
+  - RecordWildCards
+  - ScopedTypeVariables
+  - TupleSections
+  - TypeApplications

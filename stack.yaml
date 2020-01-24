@@ -1,0 +1,5 @@
+resolver: lts-14.21
+packages:
+  - .
+extra-deps:
+  - relude-0.6.0.0@sha256:094ad587b28fa8dcc78fd0fba8927b970e5e4a9bb10a3126c0ca32a7ee61f3ca,8681
