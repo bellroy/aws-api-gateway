@@ -125,7 +125,7 @@ data ProxyRequestContext
         _prcResourcePath :: Text,
         _prcHttpMethod :: Text,
         _prcApiId :: Text,
-        _prcProtocol :: Text,
+        _prcProtocol :: Maybe Text,
         _prcAuthorizer :: Maybe Authorizer
       }
   deriving (Eq, Show)
