@@ -1,0 +1,47 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f47162c9b1658abce42575526eaa872e3c5e6fdb164b70719fb06aa2f6d2d7fe
+
+name:           aws-api-gateway
+version:        0.1.0.0
+homepage:       https://github.com/tricycle/aws-api-gateway#readme
+bug-reports:    https://github.com/tricycle/aws-api-gateway/issues
+author:         Bellroy
+maintainer:     geeks@bellroy.com
+copyright:      Bellroy
+license:        Apache-2.0
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/tricycle/aws-api-gateway
+
+library
+  exposed-modules:
+      Aws.Api.Gateway
+  other-modules:
+      Prelude
+  hs-source-dirs:
+      src
+  default-extensions: DefaultSignatures DeriveAnyClass DeriveFunctor DeriveGeneric DerivingStrategies FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses OverloadedStrings RecordWildCards ScopedTypeVariables TupleSections TypeApplications
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wpartial-fields -Wtabs -Wmissing-local-signatures -fhelpful-errors -fprint-expanded-synonyms -fwarn-unused-do-bind -Werror=incomplete-patterns
+  build-depends:
+      aeson
+    , aeson-casing
+    , base-noprelude
+    , bytestring
+    , case-insensitive
+    , http-types
+    , iproute
+    , lens
+    , relude
+    , text
+    , unordered-containers
+  default-language: Haskell2010
