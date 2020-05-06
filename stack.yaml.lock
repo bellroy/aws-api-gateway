@@ -5,15 +5,15 @@
 
 packages:
 - completed:
-    hackage: relude-0.6.0.0@sha256:094ad587b28fa8dcc78fd0fba8927b970e5e4a9bb10a3126c0ca32a7ee61f3ca,8681
+    hackage: base-noprelude-4.13.0.0@sha256:3cccbfda38e1422ca5cc436d58858ba51ff9114d2ed87915a6569be11e4e5a90,6842
     pantry-tree:
-      size: 4101
-      sha256: 79a99fd25ca55b12910780ed52fa60f3b19d97be03cb6ad5ad96abaf4f428478
+      size: 112
+      sha256: 90db92c8401880187ce642c5345407bcbd9546ea235524dd445cab2566ee3db1
   original:
-    hackage: relude-0.6.0.0@sha256:094ad587b28fa8dcc78fd0fba8927b970e5e4a9bb10a3126c0ca32a7ee61f3ca,8681
+    hackage: base-noprelude-4.13.0.0@sha256:3cccbfda38e1422ca5cc436d58858ba51ff9114d2ed87915a6569be11e4e5a90,6842
 snapshots:
 - completed:
-    size: 524162
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/14/21.yaml
-    sha256: 9a55dd75853718f2bbbe951872b36a3b7802fcd71796e0f25b8664f24e34c666
-  original: lts-14.21
+    size: 494638
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/15/11.yaml
+    sha256: 5747328cdcbb8fe9c96fc048b5566167c80dd176a41b52d3b363058e3cc1dc5d
+  original: lts-15.11
