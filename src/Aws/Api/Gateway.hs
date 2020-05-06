@@ -9,17 +9,12 @@ import Control.Lens hiding ((.=))
 import Data.Aeson hiding (String)
 import Data.Aeson.Casing (aesonDrop, camelCase)
 import Data.Aeson.TH (deriveFromJSON, deriveToJSON)
-import Data.ByteString (ByteString)
 import qualified Data.CaseInsensitive as CI
-import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap
 import Data.IP
-import Data.Text (Text)
 import qualified Data.Text as Text
 import Data.Text.Encoding (decodeUtf8, encodeUtf8)
-import GHC.Generics (Generic)
 import qualified Network.HTTP.Types as HTTP
-import Relude.Bool.Guard (guarded)
 import Prelude hiding (decodeUtf8, encodeUtf8)
 
 type Method = Text
@@ -253,3 +248,49 @@ responseBody = proxyResponseBody . at ()
 type Request = ProxyRequest ByteString
 
 type Response = ProxyResponse ByteString
+
+emptyProxyRequest :: ProxyRequest a
+emptyProxyRequest =
+  ProxyRequest
+    { _proxyRequestResource = mempty,
+      _proxyRequestPath = mempty,
+      _proxyRequestHttpMethod = "GET",
+      _proxyRequestHeaders = mempty,
+      _proxyRequestQueryStringParameters = mempty,
+      _proxyRequestPathParameters = mempty,
+      _proxyRequestStageVariables = mempty,
+      _proxyRequestRequestContext = emptyRequestContext,
+      _proxyRequestBody = Nothing
+    }
+
+emptyRequestContext :: ProxyRequestContext
+emptyRequestContext =
+  ProxyRequestContext
+    { _prcPath = mempty,
+      _prcAccountId = mempty,
+      _prcResourceId = mempty,
+      _prcStage = mempty,
+      _prcRequestId = mempty,
+      _prcIdentity = emptyRequestIdentity,
+      _prcResourcePath = mempty,
+      _prcHttpMethod = mempty,
+      _prcApiId = mempty,
+      _prcProtocol = mempty,
+      _prcAuthorizer = Nothing
+    }
+
+emptyRequestIdentity :: RequestIdentity
+emptyRequestIdentity =
+  RequestIdentity
+    { _riCognitoIdentityPoolId = mempty,
+      _riAccountId = mempty,
+      _riCognitoIdentityId = mempty,
+      _riCaller = mempty,
+      _riApiKey = mempty,
+      _riSourceIp = Nothing,
+      _riCognitoAuthenticationType = mempty,
+      _riCognitoAuthenticationProvider = mempty,
+      _riUserArn = mempty,
+      _riUserAgent = mempty,
+      _riUser = mempty
+    }
